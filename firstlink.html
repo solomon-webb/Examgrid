@@ -1,0 +1,619 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+.xcontainer input[type=password], .xcontainer select, .xcontainer textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.xcontainer label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+.xcontainer input[type=submit] {
+    background-color: #8A0707;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+.xcontainer input[type=submit]:hover {
+    background-color: #AD4379;
+}
+
+.xcontainer {
+    border-radius: 8px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin:1em auto;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - BADDEST GIDIBOSS */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, .xconatiner input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+
+
+/* WHATSAPP */
+a{
+	text-decoration: none;
+}
+
+.bar_wpp {
+  position: fixed;
+  bottom: 5px;
+  right: 10px;
+  z-index: 120;
+  border-radius: 5px 5px 0px 0px;
+  overflow: hidden;
+}
+
+.bar_wpp a {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.bar_wpp .icon_wpp i {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.bar_wpp .icon_wpp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0c7619;
+  text-align: center;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  float: left;
+  z-index: 2;
+}
+
+.bar_wpp .txt_wpp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #0e3f14;
+    color: #ffffff;
+    padding: 0px 5px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    padding-right: 11px;
+    padding-left: 45px!important;
+    margin-left: -35px;
+    z-index: 1;
+    border-radius: 50px;
+}
+
+
+.bar_wpp a:hover{text-decoration: none !important;}
+.bar_wpp a:hover .icon_wpp{background-color: #0e3f14;}
+.bar_wpp a:hover .txt_wpp{background-color: #0c7619;}
+
+
+@media(max-width: 475px){
+  .bar_wpp{right: auto;left: 5px;bottom: 15px;}
+  .bar_wpp .icon_wpp i{font-size: 25px;}
+  .bar_wpp .txt_wpp{display: none;}
+}
+</style>
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <title> Examgrid - best online exams solution Package</title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+            <style>
+                body,html{ margin: 0; padding:0; }
+                body{
+                    max-width:750px;
+                    margin: auto;
+                }
+                a{
+                    text-decoration: none;
+                    color:darkviolet;
+                }
+                img {
+                    max-width:97%;
+                    height: auto;
+                }
+                #sheader{
+                    background: #8A0707;
+                    color:#fff;
+                    font-family: Arial, Verdana;
+                    display: block;
+                }
+                #sheader .header{
+                    font-size:32px;
+                    font-weight: bold;
+                    padding:10px 10px 10px 10px;
+                }
+                .info{
+                    color:yellow;
+                    margin-left: 5px;
+                    margin-bottom: 4px;
+                    font-size: 14px;
+                }
+                .nav{
+                    border-top: 1px solid #fff;
+                    padding:7px 7px 7px 15px;
+                    background: #8A0707;
+                    font-size: 14px;
+                }
+                .nav a{
+                    color:#fff;
+                    font-weight: bold;
+                    text-decoration: none;
+                }
+                .itms{
+                    color:red;
+                    margin:7px;
+                    font-size:16px;
+                }
+                .space{
+                    margin:7px;
+                }
+                .updates{
+                    font-size:15px;
+                    text-transform: uppercase;
+                    margin:20px;
+                    font-weight: bold;
+                }
+                .updates a{
+                    text-decoration: underline;
+                    color:cornflowerblue;
+                    font-size:16px;
+                    
+                }
+                .footer{
+                    padding:5px;
+                    text-align: center;
+                    background: #8A0707;
+                    color:#fff;
+                    margin-top:20px;
+                    font-size:13px;
+                }
+                .passwordEnter{
+                    border:1px solid #e0e0e0;
+                    background:#f0f0f0;
+                    padding:12px;
+                    text-align: center;
+                    margin:10px auto;
+                }
+                .passwordEnter input, .itemContainer input[type="text"], .itemContainer input[type="password"]{
+                    height:35px;
+                    width:95%
+                }
+                .passwordEnter textarea{
+                    width:99%;
+                    max-width:700px; margin:0px auto; border:1px solid #aaa; height:500px; max-height:500px; min-height:500px;
+                }
+                .itemContainer input[type="submit"]{
+                    height:35px;
+                    padding:0 10px 0 10px;
+                }
+                .itemContainer textarea{
+                    width:95%;
+                    height:170px;
+                }
+                .itemContainer{
+                    border-radius: 5px;
+                    margin: 10px;
+                    border:1px solid #e0e0e0;
+                    background: #f0f0f0;
+                    padding:7px;
+                }
+                .center{
+                    text-align:center;
+                }
+                .post{
+                    border:1px solid #e0e0e0;
+                    margin:10px;
+                    background:#f0f0f0;
+                }
+                .post .poster{
+                    border-bottom:1px solid #e0e0e0;
+                    padding:5px;
+                }
+                .post .positem{
+                    padding:5px;
+                }
+                .upd-content{
+                    padding:15px;
+                    color:#444;
+                }
+                .ddd{
+                    color:darkgoldenrod;
+                }
+                .paging{
+                    margin:5px;
+                }
+                #MsgBox {
+                    display:block;
+                    border:2px solid #d2d2d2;
+                    width:98%;
+                    margin:1em auto;
+                    font-size:.9em;
+                    background-color: #ddd;
+                    padding:8px;
+                    text-align:left;
+                    font-weight: bold;
+                }
+            </style>
+        </head>
+        <body>
+            <div id="sheader">
+                <div class="header">
+                    <a href="/"><font color="yellow"> Examgrid</font></a>
+                </div>
+                <div class="info" style="display:none;">Your Success is assured!
+                    
+                </div>
+                            </div>
+
+<div class="xcontainer">
+<form method="post" action="epage.php">
+<div class="row">
+<div class="col-25"> 
+<label for="fname">Enter The <font color="red">PIN</font> Sent To You Below And Click On <font color="red">Get Answers</font>:</label>
+</div>
+<div class="col-75">
+<input type="password" name="pin" placeholder="Enter pin">
+</div>
+</div>
+<div class="row">
+<input type="submit" name="access" value="Get Answers">
+</div>
+</form>
+</div>
+
+<div class="itms">
+            
+        </div>
+        <div id='MsgBox' style='margin-top:-5px'><center><font color="green">EXAMGRID is the No1 Verified And Trusted Exam Expo Website for 100% Legit JAMB, WAEC,NECO, GCE,NABTEB,IJMB & JUPEB</font><br />
+<font color="brown">(Invite your classmates and friends here)</font><br />
+<hr><br />
+<font color="green">PASSWORD PIN FOR PREVIOUS EXAM</font><br />
+<font color="brown">821,2390,5126,3244,6048|4099,2880,505,5250,5788</font><br />
+<br />
+<font color="green">Tell your friends and classmates about Www.ExamAfrica.Com</font><br />
+<hr><br />
+<br />
+<div style="background-color:#FFFFFF"> <font color="red"> <font size="3"><u><font color="red">UPDATES:</u></font><br />
+<br />
+<font color="brown">Don't Fall To Scammers, EXAMGRID is The Only Legit Exam Expo Website And Our Official Whatsapp Number Remain 08165164319 & 08053939955.<br />
+<br />
+Many People Claming To Be Us They Are Fraudster And Scammers Pls Take Note Once You Go Pay Another Person Your Money Don Go And You Will Not Get Correct Answers</font><br />
+<br />
+<hr><br />
+<div style="background-color:#FFFFFF"><br />
+<font color="black"><font size="3"><u>2024 WAEC SSCE-MIDNIGHT-QUESTIONS AND ANSWERS.</u></font><br />
+(i)Bulk And Group Subjects Questions & Answers:<br />
+Contact Us On WhatsApp:<font color="red">08165164319 & 08053939955</font><br />
+<br />
+(ii)All Subjects Questions & Answers: <font color="green">₦20,000</font><br />
+<br />
+(iii)All Science Questions & Answers: <font color="green">₦7,000</font><br />
+<br />
+(iv)All Art Questions & Answers: <font color="green">₦6,000</font><br />
+<br />
+(v)All Commercial Questions & Answers: <font color="green">₦5,000</font><br />
+<br />
+(vi)All Subjects Password & Link: <font color="green">₦15,000</font><br />
+<br />
+<u><font color="red">PAYMENT THROUGH BANK</font></u><br />
+Chat Us On WhatsApp for our Account Num: <font color="red">08165164319 & 08053939955</font><br />
+<br />
+Text "I need Bank details"<br />
+<br />
+<u><font color="red">PAYMENT THROUGH MTN RECHARGE CARD</font></u><br />
+SEND THE FOLLOWING TO US ON WHATSAPP: <font color="red">08165164319 & 08053939955</font> Only<br />
+(i)MTN-CARD<br />
+(ii)AMOUNT PAID<br />
+(iii)EXAM NAME<br />
+(iv)PHONE NUMBER<br />
+(v)SUBJECTS<br />
+SEND THE FOLLOWING TO US ON WHATSAPP: <font color="red">08165164319 & 08053939955</font> Only<br />
+<br />
+<font color="green">PAYMENT FOR BULK SUBJECTS, GROUP AND PASSWORD LINK CONTACT US ON WHATSAPP:</font> <font color="red">08165164319 & 08053939955</font><br />
+<hr><br />
+<div style="background-color:#FFFFFF"> <font color="red"> <font size="3"><u>2024 NECO SSCE-MIDNIGHT-QUESTIONS AND ANSWERS.</u></font> </font><br />
+(i)Bulk And Group Subjects Questions & Answers:<br />
+Contact Us On WhatsApp: <font color="red">08165164319 & 08053939955</font><br />
+<br />
+(ii)All Subjects Questions & Answers: <font color="green">₦20,000</font><br />
+<br />
+(iii)All Science Questions & Answers: <font color="green">₦7,000</font><br />
+<br />
+(iv)All Art Questions & Answers: <font color="green">₦6,000</font><br />
+<br />
+(v)All Commercial Questions & Answers: <font color="green">₦5,000</font><br />
+<br />
+(vi)All Subjects Password & Link: <font color="green">₦15,000</font><br />
+<br />
+<u><font color="red">PAYMENT THROUGH BANK</font></u><br />
+Chat Us On WhatsApp for our Account Num: <font color="red">08165164319 & 08053939955</font><br />
+<br />
+Text "I need Bank details"<br />
+<br />
+<u><font color="red">PAYMENT THROUGH MTN RECHARGE CARD</font></u><br />
+SEND THE FOLLOWING TO US ON WHATSAPP: <font color="red">08165164319 & 08053939955</font> Only<br />
+(i)MTN-CARD<br />
+(ii)AMOUNT PAID<br />
+(iii)EXAM NAME<br />
+(iv)PHONE NUMBER<br />
+(v)SUBJECTS<br />
+SEND THE FOLLOWING TO US ON WHATSAPP: <font color="red">08165164319 & 08053939955</font> Only<br />
+<br />
+<font color="green">PAYMENT FOR BULK SUBJECTS, GROUP AND PASSWORD LINK CONTACT US ON WHATSAPP:</font> <font color="red">08165164319 & 08053939955</font><br />
+<hr><br />
+<font color="red">Note;</font><br />
+<b>Paying In Bulk Is Cheaper Than Daily Payments. Payments are Done Now Through Bank or MTN card. Be Wise And Act Smart.<br />
+<br />
+100% Refund Of Your Money If 2024 WAEC AND NECO AND WAEC Questions & Answers Is Not Delivered/Send To You Midnight Before Exam. Tell The World About Www.  Examgrid</b><br />
+<br />
+<font color="red">Note;</font><br />
+<b>We Only Send Important Subjects Mid-Night Before Exam Time. Other Little Subject With Few Candidates Will Come 5hrs Hours Before Exam Time. Pls Take Note Of That.<br />
+100% Assurance And Authentic Answers Will Reach To You. Don't Panic We Never Fail To Our Promise. Give It A Try And Enjoy Our Service. Once Again Dont Be Deceived By Other Site Or WhatsApp People Or Groups Promising And Telling You Stories They will give you Fake or late Answers. For Your Own Good Kindly Subscribe With Us For Your early Answers.</b><br />
+<hr><br />
+<font color="green">OUR 2024 WAEC AND NECO EXAMINATION EXPO RUNZ WILL BE THE BEST....<br />
+<br />
+BECAUSE WE ARE THE BEST, WE MAKE THE BEST RESULT AND WE REMAIN THE BEST.<br />
+<br />
+DON'T LET LITTLE AMOUNT OF MONEY MAKE YOU SPEND 3TIMES THE AMOUNT IN RE-WRITING THE EXAM<br />
+<br />
+IF YOU HAVE NOT SUBSCRIBE FOR YOUR 2023 WAEC AND NECO ANSWERS PLS KINDLY DO THAT TO BE IN SAFE HANDS.</font><br />
+<hr><br />
+=>2024 WAEC AND NECO Bulk Subscription(for all your Subjects) Is still ongoing<a href="https://wa.me/2348165164319"> Click Here To Chat us On WhatsApp</a><br />
+<hr><br />
+<u><font color="red">2023-JAMB-CBT/TRAINING-ANSWER-BEFORE-EXAM.</font></u><br />
+<br />
+<font color="green">ARE YOU SEARCHING FOR 2023 JAMB CBT ASSISTANCE?</font><br />
+<br />
+On this page, we will put you through how to subscribe and get the accurate correct JAMB Questions and Answers 5hours before the exam commences. kindly take your time to read through the page as we have also taken our time to explain everything in full detail.<br />
+<br />
+Do you know that if you are seeking admission into university or polytechnic with your course choice, you must have scored more than 250+ in your JAMB result because it gives you better chance than those WITH 200+?<br />
+<br />
+<font color="red">Here We have two(2) categories Method of delivering the 2023 JAMB answers. They are listed below</font><br />
+<hr><br />
+<font color="red">NORMAL-PACKAGE-INFO:</font><br />
+NORMAL-Package REBRANDED Minimum score is 190+ above Assured And guaranteed And 100% Refund If You Did Not Score The Promised Score. That Why We Do Advice You All To Pay On time/early. You Will Get Our 2023 JAMB-CBT-NORMAL-PACKAGE-(REBRANDED) 1;30hrs Before Your Exam Date And Time, This Package includes Training/Lesson/JAMB-CBT MATERIALS for higher scores levels to Ensure You Score High and Know How to use it.<br />
+<br />
+The examination is computer base. It’s now easier for us to get the 2023 JAMB questions and answers because this time We Shall be Applying a Unique Systematic Software Extraction Method REBRANDED in getting your exact questions and answers on the jamb database, Using this LINK; https://examafrica.com/jamb<br />
+<br />
+You will have to log in with your Jamb Reg Number To Access Your 2023 JAMB Particular Answers. Once You Subscribe with us i.e You Pay to Us, Instantly Your Jamb Reg Number will be Registered By the Admin. Contact MR TONY K ON WHATSAPP at 08165164319 & 08053939955 to Get Registered Now.<br />
+<br />
+AFTER PAYMENT: CLICK HERE TO ACCESS YOUR 2023 JAMB ANSWERS <br />
+<hr><br />
+<font color="green">VIP-PACKAGE-INFO:</font><br />
+VIP-Package REBRANDED Minimum score is 290+ above Assured And Guarantee And 100% Refund If You Did Not Score The Promised Score. That Why We Do Advice You All To Pay On time/early. You Will Get Our JAMB-CBT-VIP-PACKAGE-(REBRANDED)  5hrs Before Your Exam Date And Time, This Package includes Training/Lesson/JAMB-CBT MATERIALS for higher scores levels and to Ensure You Score High and Know How to use it.<br />
+<br />
+The examination is computer base. It’s now easier for us to get the questions and answers because this time We Shall be Applying a Unique Systematic Software Extraction Method REBRANDED in getting your exact questions and answers on the jamb database, Using this LINK; https://examafrica.com/jamb <br />
+<br />
+You will have to Login with your Jamb Reg Number To Access Your JAMB Particular Answers. Once You Subscribe with us i.e You Pay to Us, Instantly Your Jamb Reg Number will be Registered By the Admin. Contact MR TONY K ON WHATSAPP OR SMS 08165164319 & 08053939955 to get Registered Now.<br />
+<br />
+AFTER PAYMENT: CLICK HERE TO ACCESS YOUR  JAMB ANSWERS<br />
+<hr><br />
+<font color="blue">2023-JAMB-CBT-ANSWERS-FORMAT:</font><br />
+We Shall Be Using a Unique Systematic Software Extraction Method Once You Login With the PIN given to you by the Admin (Mr Tony k) Your Jamb questions and answers will be displayed to you.... No delay Start paying to join our tutorial class.<br />
+<br />
+The VIP PACKAGE is highly recommended<br />
+<hr><br />
+<font color="red">Important Info On 2023 JAMB-CBT:</font><br />
+<br />
+<font color="green">100% Refund for any of our Jamb 2023 Subscribers who scored below 180. 100% Assurance And Authentication Of You Getting Your Question And Answers 4hrs before exam. Don't Panic We Never Fail To Our Promise. Give It A Try And Enjoy Our Service. Once Again Dont Be Deceived By Other Site Or WhatsApp People Or Groups Promising And Telling Stories They will give you Fake Answers. For Your Own Good Kindly Subscribe To Us For 100% Assurance...</font><br />
+<br />
+<u><font color="green">[2023 JAMB CBT SUBSCRIPTION PRICE LIST]</font></u><br />
+<br />
+NOTE; pay now so that we can train/perpare you for high score in the upcoming 2023 JAMB CBT Examination.<br />
+<br />
+<font color="red">(i)Normal-package:</font> 1 candidate+ 4subject <font color="red">N7,000</font><br />
+<br />
+<font color="red">(ii)VIP-Package:</font> for 1 Candidate+4subject: <font color="red">N10,000</font><br />
+This package is highly recommended<br />
+<br />
+<font color="red">(iii)20 students : N100,000</font> this is for people that have many candidates starting from 20 above. We will charge you <font color="red">N5000</font> each.<br />
+<br />
+<font color="red">How To Pay/Subscribe To Our 2023-JAMB-CBT-RUNZ/EXPO.</font><br />
+<br />
+<u><font color="red">PAYMENT THROUGH BANK.</font></u><br />
+<br />
+Chat Us on WhatsApp for Bank details: 08165164319 & 08053939955<br />
+<br />
+Text “I Need Bank Details”<br />
+</hr><br />
+<font color="red">PAYMENT THROUGH MTN CARD</font><br />
+<br />
+<font color="green">SEND THE FOLLOWING TO 08165164319 & 08053939955 VIA WHATSAPP Only</font><br />
+<br />
+(i)Your Name<br />
+(ii)MTN-CARD PIN<br />
+(iii)Amount Paid<br />
+(iv) Your Subjects<br />
+(v) Your Phone number.<br />
+(vi) JAMB Registration Number (if available)<br />
+<br />
+Send TO The WHATSAPP Number Below-<br />
+08165164319 & 08053939955<br />
+08165164319 & 08053939955<br />
+Only<br />
+<br />
+<font color="red">YOU WILL RECEIVE A CONFIRMATION SMS SHORTLY CONTAINING YOUR JAMB ACCESS PIN</font><br />
+<hr><br />
+<font color="red">JAMB CBT HAVE THREE(3) BATCHES EACH DAY</font><br />
+<br />
+1st Batch, Will Commence By 7:00 am<br />
+<br />
+2nd Batch, Will Commence By 9:30 am<br />
+<br />
+3rd Batch, Will Commence By 1:30 pm<br />
+<br />
+<font color="purple">FOR JAMB SUBJECT COMBINATION FOR ALL COURSES</font><form method="post" action="epage.php"><input type="text" name="pin" value="1995" style="display:none;"><input type="submit" name="access" value="CLICK HERE AND SEE"></form><br />
+<hr><br />
+<font color="red">MODE AND FORMAT WE DELIVER 2023 JAMB ANSWERS</font><br />
+<br />
+(1) What is the molar mass of HCL<br />
+A.46g/mol<br />
+B.24g/mol<br />
+C.36.5g/mol✔<br />
+D.40g/mol<br />
+The correct answer is C and therefore C was thicked<br />
+<br />
+<font color="red">NOTE:</font> Answers delivered to you, Only belong to You. Each answer is assigned to your JAMB ACCESS PIN and linked to your JAMB Registration Number. You can access it with the PERSONAL ACCESS PIN sent to you by the admin.<br />
+<br />
+<font color="red">The Following Details Are required from Each JAMBITE</font><br />
+<br />
+• Your Jamb Registration Number<br />
+• Your Center Number<br />
+• Your Four Subject<br />
+• Your Sit Number<br />
+• Your Exam Date and Time.<br />
+<br />
+<font color="purple">OUR PAST JAMB SUBSCRIBERS RESULTS SPEAKS FOR US</font> <form method="post" action="epage.php"><input type="text" name="pin" value="1996" style="display:none;"><input type="submit" name="access" value="CLICK HERE AND SEE "></form><br />
+<hr><br />
+<font color="red">AVAILABLE SUBJECTS</font><br />
+• Use of English<br />
+• Mathematics<br />
+• Biology<br />
+• Physics<br />
+• Chemistry<br />
+• Economics<br />
+• Geography<br />
+• Government<br />
+• Civic Education<br />
+• Literature in English<br />
+• Agricultural Science<br />
+• Christain Religious Studies<br />
+• Islamic Religious Studies<br />
+• Accounting<br />
+• Marketing<br />
+• Commerce<br />
+• Arabic<br />
+<br />
+<font color="red">NOTE 1:</font>We Shall be Applying a Unique Systematic Software Extraction Method in getting your exact questions and answers on the JAMB CBT database.<br />
+<br />
+<font color="red">NOTE 2:</font> <br />
+    Using this LINK; <a href="jambrunx.html">jambrunx</a> You will have to Log in with your Jamb Reg Number To Access Your JAMB CBT Answers. Once You Subscribe with us i.e You Pay to Us, Instantly Your Jamb Reg Number will be Registered by our Admin. Contact MR TONY K ON WHATSAPP OR SMS at 08165164319 & 08053939955 to get Registered Now.<br />
+<br />
+<font color="red">Note:</font> ONCE YOUR PAYMENTS IS RECEIVED, A Confirmation Text Message With Your ACCESS PIN Will be Sent to You. We have made some points for all candidates to be alert and be careful. <font color="purple">Examgrid</font> is the only recommended and trusted website to use for your 2023 JAMB RUNS.<br />
+<br />
+<font color="darkviolet"><a href="jambrunz.html">JAMB RUNZ</a></font>: The Questions and Answers delivered to you, Only belong to You. Each Question and answer is assigned to your JAMB Registration Number. You can access your jamb questions and answers Using this link;  <a href="index.html">Examgrid/a> Only if your jamb registration number is registered by our Admin. Contact MR TONY K ON WHATSAPP OR SMS 08165164319 & 08053939955 to get Registered Now.<br />
+<br />
+Www.EXAMGRID is the only recommended and trusted website to use for your 2023 JAMB RUNS.<br />
+<hr><br />
+<font color="darkviolet"><a href="jambrunz.html">JAMB</a> FACT:</font> Many say it’s impossible to get JAMB CBT questions, but we assure you that it’s a possible fact provided you can meet its demands. We recommend that you go for the <font color="red">VIP Package</font> to avoid delays. Again, for the fact that you have seen this JAMB HELP SITE, it means you are fortunate this year. Yes! we are true and committed to our words. We don't toil on one's future by confiding on their hard-earned money. Just give us a one-time trial and see for yourself! The subscription amount is not too much to afford when compared to what you achieve after the examination.<br />
+Save yourself an extra year at home with just a token! All Your Examination Date Questions and Answers Will be Sent to You 5hours Before the scheduled Examination Time-varying on the package you paid for, so there is no reason to worry.<br />
+<hr><br />
+<font color="purple">Frequently Asked Questions and Answers</font><br />
+<br />
+<font color="red">Question 1: How will I know I have paid?</font><br />
+<font color="green">Answer: You will receive a confirmation SMS alert containing Your Name, Your Access Pin, and Package.</font><br />
+<br />
+<font color="red">Question 2: If I pay this amount now, will it be too early?</font><br />
+<font color="green">Answer: NO, it's a good one on your side because our price will increase soon. In conclusion, late payments must attract additional fees, and is now open that early payment deserves special treatments. once your payment has been verified, You will be added to our database where you can confirm your details without any error using the Access Pin sent to you by the Admin.</font><br />
+<br />
+<font color="red">Question 3: If I pay this amount will I pay any additional fee?</font><br />
+<font color="green">Answer: No, But if it warrants so, late subscribers will bear the cause.</font><br />
+<br />
+<font color="red">Question 4: Is this payment for each subject?</font><br />
+<font color="green">Answer: No! For all 4 subjects. But if you need all Department subjects, Whatsapp 08165164319 & 08053939955 for a Deal.</font><br />
+<br />
+<font color="red">Question 5: How quickly will these answers come?</font><br />
+<font color="green">Answer: ExamAfrica JAMB CBT Machinery has never failed, 5hours before the scheduled examination time, all questions and answers will be posted on the Access Pin sent to you by the Admin.</font><br />
+<br />
+<font color="red">Question 6: How am I sure this is not a scam?</font><br />
+<br />
+<font color="green">Answer: No! And Can never Be! ExamAfrica is not new to this. We have been responsible for assisting Candidates for many years now, and The outgoing IJMB, WAEC, JUPEB, GCE, NECO AND NABTEB candidates felt our endless answers midnight/hours before the exam but JAMB is cbt.. 5hours before the exam is a rest assured time.</font><br />
+<br />
+<font color="red">Question 7: Why do you need my JAMB Registration Number?</font><br />
+<font color="green">Answer: We need it because, with your JAMB Registration Num, we will use it to extract your exact questions, solve and paste your questions and answers to the Access Pin sent to you by the Admin.</font><br />
+<hr><br />
+<font color="red">ADVICE:</font> He who fails to plan, plans to fail.<br />
+<br />
+<font color="darkviolet">Be among Our Yearly 20,000 Successful Candidates. Give us a one-time trial and see for yourself! We reduced our <a href="https://examcode.net/ng/jamb-runz-expo/">JAMB</a> CBT Package amount Because we want to carry everyone Along. Save yourself an extra year at home with just a Small token! It is not much to afford when compared to what you’ll achieve after the exam.<br />
+</font><br />
+<font color="purple">Www.ExamAfrica.Com<br />
+We Remain The Best Examination Portal</font><br />
+<hr><br />
+<a href="https://wa.me/2348165164319">Click Here To Chat us On WhatsApp</a><br />
+WhatsApp Msg Only;<font color="red"> 08165164319 & 08053939955<br />
+</font><br />
+For Payment/Enquiry; Chat Mr Tony k on WhatsApp <font color="red"> 08165164319 & 08053939955<br />
+</font><br />
+<hr><br />
+<div style="background-color:#f0f0f0"> <font color="red"> <font size="3"><u>BEWARE/WARNING!!!!.</u></font> </font> Our Official WhatsApp Number Remains; <font color="red"> 08165164319 & 08053939955<br />
+</font><br />
+<a href="https://wa.me/2348165164319">Click Here To Chat Mr Tony k On WhatsApp</a><br />
+WhatsApp Msg Only; <font color="red"> 08165164319 & 08053939955<br />
+</font><br />
+<hr><br />
+     
+                
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<div class="bar_wpp">
+		<a href="https://api.whatsapp.com/send?phone=2348165164319&text=Hello." title="Message US on WhatsApp" target="_blank">
+				<div class="icon_wpp"> <i class="fa fa-whatsapp" aria-hidden="true"></i></div>
+				<div class="txt_wpp">
+						Message US on WhatsApp
+				</div>
+		</a>
+</div>
+    
+
+<center><div style='background-color:#d6eaf8;padding:2px;color:black;border-radius: 17px;border:2px dashed black;height:40px:font-size:18px;'><marquee behavior='alternate' scrolldelay='200'><font color='red'>Please Do Not Call Us.WhatsApp only: 08165164319 & 08053939955 (We Reply WhatsApp messages fast)</marquee></div></center>
+<div class="footer">(c) EXAMGRID Exam Panel<br>Designed By <a href="/"><font color="yellow">SoloVibe</font></a></div>
+        </body>
+    </html>
+<!-- </dOctype>
