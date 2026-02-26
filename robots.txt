@@ -1,0 +1,11 @@
+# robots.txt for examgrid-brown.vercel.app
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://examgrid-brown.vercel.app/sitemap.xml
+
+# Optional: block admin/api pages if any
+Disallow: /api/
+Disallow: /admin/
