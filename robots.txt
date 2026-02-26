@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://examgrid-brown.vercel.app/sitemap.xml
