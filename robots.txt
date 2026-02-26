@@ -1,4 +1,10 @@
+# robots.txt for examgrid-brown.vercel.app
+
 User-agent: *
 Allow: /
 
 Sitemap: https://examgrid-brown.vercel.app/sitemap.xml
+
+# Block common unwanted crawler paths (optional)
+Disallow: /admin/
+Disallow: /api/
